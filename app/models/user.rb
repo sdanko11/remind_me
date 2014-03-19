@@ -9,6 +9,6 @@ class User < ActiveRecord::Base
 
   validates_presence_of :name
 
-  validates :phone_number, presence: :true, format: { with: /\d{10}/ }
+  validates :phone_number, presence: :true, uniqueness: true, format: { message: "Only 10 digit phone numbers with no dashes will be accepted", with: /\d{10}/ }
   
 end
