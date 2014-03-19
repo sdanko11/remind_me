@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="small-12 medium-6 large-6 small-centered columns">
+    <div id="sign_up_links">
+      <% if user_signed_in? %>
+        <%= link_to "Sign out", destroy_user_session_path %>
+      <% else %>
+        <%= link_to "Sign Up", new_user_registration_path, class: "button" %>
+        <%= link_to "Sign In", new_user_session_path, class: "button" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 medium-7 large-7 small-centered columns">
+    <h2 id="how_it_works_text">Place holder for the how it works</h2>
+  </div>
+</div>
